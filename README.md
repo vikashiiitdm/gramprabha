@@ -1,0 +1,1 @@
+ This is the repository for the gramprabha project -- an agro-portal and an e-commerce portal. The project is in its'adolescene only the front-end has been designed till date, very little progress on the implementation part of the back-end has been achieved .  DATED : 25th july 2012 1628 HRS
