@@ -1,0 +1,595 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Registration Form</title>
+<style type="text/css">
+.txtsuper
+{
+		font-family : Tahoma,Verdana, Geneva, Arial, Helvetica, sans-serif;
+		font-size : 13px;
+		font-style : normal;
+		font-variant : normal;
+		color: Red;
+		font-weight: bolder;		
+}
+.textn
+{
+		font-family : Tahoma,Verdana, Geneva, Arial, Helvetica, sans-serif;
+		font-size : 11px;
+		font-style : normal;
+		font-variant : normal;
+		color:#000000;
+}
+.footLine
+{
+	background:#00C;
+}
+
+</style>
+<script language="JavaScript" type="text/javascript">
+/*Email Validation*/
+function eMailCheck(str)
+{
+	var at="@";
+	var dot=".";
+	var lat=str.indexOf(at);
+	var lstr=str.length;
+	var ldot=str.indexOf(dot);
+	var returnValue = true;
+	if (str.indexOf(at)==-1)
+	{
+	    returnValue = false;
+	}
+	if (str.indexOf(at)==-1 || str.indexOf(at)==0 || str.indexOf(at)==lstr)
+	{
+		returnValue = false;
+	}
+	if (str.indexOf(dot)==-1 || str.indexOf(dot)==0 || str.indexOf(dot)==lstr)
+	{
+	    returnValue = false;
+	}
+	if (str.indexOf(at,(lat+1))!=-1)
+	{
+		returnValue = false;
+	}
+	if (str.substring(lat-1,lat)==dot || str.substring(lat+1,lat+2)==dot)
+	{
+	    returnValue = false;
+	}
+	if (str.indexOf(dot,(lat+2))==-1)
+	{
+	    returnValue = false;
+	}	
+	if (str.indexOf(" ")!=-1)
+	{
+	    returnValue = false;
+	}
+	return returnValue;					
+}
+function daysInFebruary (year)
+{
+// February has 29 days in any year evenly divisible by four,
+   // EXCEPT for centurial years which are not also divisible by 400.
+   return (((year % 4 == 0) && ( (!(year % 100 == 0)) || (year % 400 == 0))) ? 29 : 28 );
+}
+function DaysArray(n)
+{
+	for (var i = 1; i <= n; i++) 
+	{
+		this[i] = 31
+		if (i==4 || i==6 || i==9 || i==11) {this[i] = 30}
+		if (i==2) {this[i] = 29}
+  	}
+ 	return this
+}
+function isDate(dtStr)
+{	
+	var daysInMonth = DaysArray(12)	
+	var pos1=dtStr.indexOf(dtCh)
+	var pos2=dtStr.indexOf(dtCh,pos1+1)
+	var strMonth=dtStr.substring(0,pos1)
+	var strDay=dtStr.substring(pos1+1,pos2)
+	var strYear=dtStr.substring(pos2+1)
+	strYr=strYear
+	if (strDay.charAt(0)=="0" && strDay.length>1) strDay=strDay.substring(1)
+	if (strMonth.charAt(0)=="0" && strMonth.length>1) strMonth=strMonth.substring(1)
+	for (var i = 1; i <= 3; i++)
+	{
+		if (strYr.charAt(0)=="0" && strYr.length>1) strYr=strYr.substring(1)
+	}
+	month=parseInt(strMonth)
+	day=parseInt(strDay)
+	year=parseInt(strYr)
+	if (pos1==-1 || pos2==-1)
+	{
+		alert("The date format should be : mm/dd/yyyy")
+		return false
+	}
+	if (strMonth.length<1 || month<1 || month>12)
+	{
+		alert("Please enter a valid month for your date of birth")
+		return false
+	}
+	if (strDay.length<1 || day<1 || day>31 || (month==2 && day>daysInFebruary(year)) || day > daysInMonth[month])
+	{
+		alert("Please enter a valid day for your date of birth")
+		return false
+	}
+	if (strYear.length != 4 || year==0 || year<minYear || year>maxYear)
+	{
+		alert("Please enter a valid 4 digit year between "+minYear+" and "+maxYear)
+		return false
+	}
+	if (dtStr.indexOf(dtCh,pos2+1)!=-1 || isInteger(stripCharsInBag(dtStr, dtCh))==false)
+	{
+		alert("Please enter a valid date for your date of birth")
+		return false
+	}
+	return true
+}
+ 
+function makeDaysOfMonth()
+{
+  var i = 0;
+  this[i++] = 0; // dummy
+  this[i++] = 31;
+  this[i++] = 29;
+  this[i++] = 31;
+  this[i++] = 30;
+  this[i++] = 31;
+  this[i++] = 30;
+  this[i++] = 31;
+  this[i++] = 31;
+  this[i++] = 30;
+  this[i++] = 31;
+  this[i++] = 30;
+  this[i  ] = 31;
+  this.length = i;
+}
+function calcAge(dd, mm, yy)
+{
+	  var t, mon, day, year, DD, MM, YY, age;
+	  var MTB = new makeDaysOfMonth();
+	  YY   = parseInt(yy);	// year of birth (4 digits)
+	  MM   = parseInt(mm);	// month of birth (1-12)
+	  DD   = parseInt(dd);	// date of birth (1-31)
+	  if (MTB[MM] < DD || DD < 1) return -1;
+	  t    = new Date();	// get current date
+	  year = t.getFullYear();	// get year of current
+	  mon  = t.getMonth() + 1;	// get month of current
+	  day  = t.getDate();	// get date of current
+	  if (MM == 2 && DD == 29)
+	  {
+		  // check leap year
+  	 	 if (!(((YY % 4 == 0) && (YY % 100 != 0)) || (YY % 400 == 0)))
+		 {
+			  alert("The year " +YY+ " ends at 28th of "+MM+" month\nPlease check the date.");
+			  return -1;
+    	 }
+	  }
+  	  age = year - YY;
+      if ((MM > mon) || (MM == mon && day < DD)) age --;
+  return age;
+}
+function formOnSubmit()
+{
+	var txtApName=document.getElementById("custname");
+	var txtApUsername=document.getElementById("username");
+	var txtApPassword=document.getElementById("password");
+	var txtApPassword1=document.getElementById("password1");
+	var txtApAddress=document.getElementById("custaddr");
+	var txtApCity=document.getElementById("custcity");
+	var txtApState=document.getElementById("custstate");
+	var txtApPin=document.getElementById("custpincode");
+	var txtApPhoneStd=document.getElementById("custphonestd");
+	var txtApPhone=document.getElementById("custphone");
+	var txtApMobile=document.getElementById("custmobile");
+	var txtApEmail=document.getElementById("custemail");
+	var optGenderM=document.getElementById("radiobutton10");
+	var optGenderF=document.getElementById("radiobutton11");
+	var dobday=document.getElementById("dobday");
+	var dobmonth=document.getElementById("dobmonth");
+	var dobyear=document.getElementById("dobyear");
+	var dobdayVal=parseInt(dobday.options[dobday.selectedIndex].value);
+	var dobmonthVal=parseInt(dobmonth.options[dobmonth.selectedIndex].value);
+	var dobyearVal=parseInt(dobyear.options[dobyear.selectedIndex].value);
+	var dob=dobdayVal+'/'+dobmonthVal+'/'+dobyearVal;
+	var txtApOccupation=document.getElementById("custoccupation");
+	var txtPanNo=document.getElementById("custpannumber");
+	
+	var alphaExpName=/^[a-zA-Z.\s]+$/;
+	var alphaExp=/^[a-zA-Z]+$/;
+	var alphaNumExp=/^[a-zA-Z0-9-.,\s]+$/;
+	var alphaNum=/^[a-zA-Z0-9]+$/;
+	var NumExp = /^[0-9]+$/;
+	var FloatNumExp = /^[0-9.]+$/;
+	
+	if(txtApName.value=="")
+	{
+		alert("Please enter your Name");
+		txtApName.select();
+		return false;
+	} 
+	else
+	{
+	      var elem=document.getElementById("custname");
+	       if(!elem.value.match(alphaExpName))
+		   {
+				alert("Please enter only Letters for  Name");
+				elem.focus();
+	            return false;
+	       }
+ 
+	}
+	if(txtApName.value.length>40)
+	{
+		alert("Name Exceeds the limit");
+		txtApName.select();
+		return false;
+	}
+	if(txtApUsername.value=="")
+	{
+		alert("Please enter username");
+		txtApUsername.select();
+		return false;
+	}
+	if((txtApPassword.value=="") || (txtApPassword1.value==""))
+	{
+		alert("Please enter password");
+		txtApPassword.select();
+		return false;
+	}
+	if(txtApPassword.value!=txtApPassword1.value)
+	{
+		alert("Passwords do not match,enter again");
+		txtApPassword.select();
+		return false;
+	}
+	if(txtApAddress.value=="")
+	{
+		alert("Please enter your address");
+		txtApAddress.select();
+		return false;
+	}
+	else
+	{
+	      
+	      var elem=document.getElementById("custaddr");
+	       if(!elem.value.match(alphaNumExp))
+		   {
+				alert(" Please enter only Letters or Numbers for  Address");
+				elem.focus();
+	            return false;
+	       }
+ 
+	}
+	if(txtApAddress.value.length > 100)
+	{
+		alert("Address Exceeds the Limit");
+		txtApAddress.select();
+		return false;
+	}
+	if(txtApCity.value=="")
+	{
+		alert("Please enter your City");
+		txtApCity.select();
+		return false;
+	}	
+	else
+	{
+	      var elem=document.getElementById("custcity");
+	       if(!elem.value.match(alphaExp))
+		   {
+				alert(" Please enter only Letters for  City");
+				elem.focus();
+	            return false;
+	       }
+ 
+	}
+	if(txtApCity.value.length > 50)
+	{
+		alert("City Exceeds the Limit");
+		txtApCity.select();
+		return false;
+	}
+	if(txtApState.options[txtApState.selectedIndex].value=="-1")
+	{
+		alert("Please select your State");
+		txtApState.focus();
+		return false;
+	}
+	if(txtApPin.value!="")
+	{
+		var elem=document.getElementById("custpincode");
+        if(!elem.value.match(NumExp))
+		{
+			alert(" Please enter only Numbers for  Pincode");
+			elem.focus();
+            return false;
+      	}
+	}
+	else
+	{
+		alert("Enter your pincde");
+		txtApPin.select();
+		return false;
+	}
+ 	if(txtApPin.value.length > 10)
+	{
+		alert("Pincode Exceeds the Limit");
+		txtApPin.select();
+		return false;
+	}
+	if(txtApPhoneStd.value!="")
+	{
+		var elem=document.getElementById("custphonestd");
+   		if(!elem.value.match(NumExp))
+	    {
+			alert(" Please enter only Numbers for  Std Code");
+			elem.focus();
+            return false;
+        }
+	} 
+	else
+	{
+		alert("Enter your STD code");
+		txtApPhoneStd.select();
+		return false;
+	}
+	if(txtApPhoneStd.value.length > 5)
+	{
+		alert("Std Code Exceeds the Limit");
+		txtApPhoneStd.select();
+		return false;
+	}	
+	if(txtApPhone.value!="")
+	{
+		var elem=document.getElementById("custphone");
+        if(!elem.value.match(NumExp))
+	    {
+			alert(" Please enter only Numbers for  Phone Numbers");
+			elem.focus();
+            return false;
+        }
+	}
+	else
+	{
+		alert("Enter your Phone number");
+		txtApPhone.select();
+		return false;
+	} 	
+	if(txtApPhone.value.length > 12)
+	{
+		alert("Phone Number Exceeds the Limit");
+		txtApPhone.select();
+		return false;
+	} 
+	if(txtApMobile.value!="")
+	{
+		var elem=document.getElementById("custmobile");
+        if(!elem.value.match(NumExp))
+	    {
+			alert(" Please enter only Numbers for  Mobile Number");
+			elem.focus();
+            return false;
+        }
+	}
+	else
+	{
+		alert("Enter your mobile number");
+		txtApMobile.select();
+		return false;
+	}
+	if(txtApMobile.value.length !=10)
+	{
+		alert("Please enter correct Mobile Number(10 digits)");
+		txtApMobile.select();
+		return false;
+	}
+	if(txtApEmail.value=="")
+	{
+		alert("Please enter your Email Address");
+		txtApEmail.select();
+		return false;
+	}
+	else
+	{
+		if(!(eMailCheck(txtApEmail.value)))
+		{
+			alert("Please enter a valid Email Address");
+			txtApEmail.select();
+			return false;
+		}	
+	} 
+	if(txtApEmail.value.length > 75)
+	{
+		alert("Email Exceeds the Limit");
+		txtApEmail.select();
+		return false;
+	}
+	if(!optGenderM.checked && !optGenderF.checked)
+	{
+		alert("Please select your Gender");
+		return false;
+	}
+	if(dobday.options[dobday.selectedIndex].value=="-1")
+	{
+		alert("Please select day");
+		dobday.focus();
+		return false;
+	}
+	if(dobmonth.options[dobmonth.selectedIndex].value=="-1")
+	{
+		alert("Please select month");
+		dobmonth.focus();
+		return false;
+	}
+ 	if(dobyear.options[dobyear.selectedIndex].value=="-1")
+	{
+		alert("Please select year");
+		dobyear.focus();
+		return false;
+	}
+	if (isDate(dob)==false)
+	{		
+		return false;
+	} 
+	if(calcAge(dobdayVal,dobmonthVal,dobyearVal)<18)
+	{
+		alert("The applicant should be 18 years or above. ");
+		return false;	
+	}
+	if(txtApOccupation.options[txtApOccupation.selectedIndex].value=="-1")
+	{
+		alert("Please select occupation");
+		txtApOccupation.focus();
+		return false;
+	}
+	if(txtPanNo.value!="")
+	{
+		var elem=document.getElementById("txtPanNo");
+        if(!elem.value.match(alphaNum))
+	    {
+			alert(" Please enter only Numbers or Alphabets for  Pan Number");
+			elem.focus();
+            return false;
+        }
+	} 
+	else
+	{
+		alert("Enter your pancard number");
+		rxtApPan.select();
+		return false;
+	}
+	if(txtPanNo.value.length != 10)
+	{
+		alert("Pan  Number Exceeds the Limit");
+		txtPanNo.select();
+		return false;
+	}
+}
+
+function f1()
+{
+	RegistrationForm.custname.focus();
+}
+</script>
+</head>
+
+<body bgcolor="orange" bottommargin="2" onLoad="f1()">
+	<form name="RegistrationForm" method="post" action="homepage.php" onSubmit="return formOnSubmit()"  >
+		<div align="left" id="registration">
+			<h2><img src="images/3 - Copy.jpg" width="69" height="86" alt="cnslogo">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  REGISTRATION FORM</h2>
+			<p class="footLine" valign="top" align="left" bgcolor="#0000CC">
+				<img src="img/line.jpg" alt="" width="1" height="4" class="footLine">
+			</p>
+		</div>
+		<table width="1255" height="709" border="1" bgcolor="#e7ecfa" cellpadding="10" cellspacing="2" bordercolor='#000099' bordercolordark="#000099">
+		<tr>
+			<td width="586" scope="col"><strong>NAME OF THE APPLICANT</strong><span class="txtsuper">&nbsp;*</span></td>
+			<td width="617" scope="col">&nbsp;<input name="custname" type="text" id="custname" size="50" maxlength="255"></td>
+		</tr>
+		<tr>
+			<td><strong>USERNAME</strong><span class="txtsuper">&nbsp;*</span></td>
+			<td>&nbsp;<input type="text" name="username" id="username" ></td>
+		</tr>
+		<tr>
+			<td><strong>PASSWORD</strong><span class="txtsuper">&nbsp;*</span></td>
+			<td>&nbsp;<input type="password" name="password" id="password"></td>
+		</tr>
+		<tr>
+			<td><strong>RE-TYPE PASSWORD</strong><span class="txtsuper">&nbsp;*</span></td>
+			<td>&nbsp;<input type="password" name="password1" id="password1"></td>
+		</tr>
+		<tr>
+			<td><strong>ADDRESS</strong><span class="txtsuper">&nbsp;*</span></td>
+			<td>&nbsp;<textarea name="custaddr" id="custaddr"></textarea></td>
+		</tr>
+		<tr>
+			<td><strong>CITY</strong><span class="txtsuper">&nbsp;*</span></td>
+			<td>&nbsp;<input type="text" name="custcity" id="custcity" size="30" maxlength="255"></td>
+		</tr>
+		<tr>
+			<td><strong>STATE</strong><span class="txtsuper">&nbsp;*</span></td>
+			<td>&nbsp;<select name="custstate" id="custstate" style="width:250"> 
+						<option value="-1" selected>Select state</option> 
+						<option value="ANDAMAN AND NICOBAR ISLANDS">ANDAMAN AND NICOBAR ISLANDS</option><option value="ANDHRA PRADESH">ANDHRA PRADESH</option><option value="ARUNACHAL PRADESH">ARUNACHAL PRADESH</option><option value="ASSAM">ASSAM</option><option value="BIHAR">BIHAR</option><option value="CHANDIGARH">CHANDIGARH</option><option value="CHHATTISGARH">CHHATTISGARH</option><option value="DADRA AND NAGAR HAVELI">DADRA AND NAGAR HAVELI</option><option value="DAMAN AND DIU">DAMAN AND DIU</option><option value="DELHI">DELHI</option><option value="GOA">GOA</option><option value="GUJARAT">GUJARAT</option><option value="HARYANA">HARYANA</option><option value="HIMACHAL PRADESH">HIMACHAL PRADESH</option><option value="JAMMU AND KASHMIR">JAMMU AND KASHMIR</option><option value="JHARKHAND">JHARKHAND</option><option value="KARNATAKA">KARNATAKA</option><option value="KERALA">KERALA</option><option value="LAKSHADWEEP">LAKSHADWEEP</option><option value="MADHYA PRADESH">MADHYA PRADESH</option><option value="MAHARASHTRA">MAHARASHTRA</option><option value="MANIPUR">MANIPUR</option><option value="MEGHALAYA">MEGHALAYA</option><option value="MIZORAM">MIZORAM</option><option value="NAGALAND">NAGALAND</option><option value="ORISSA">ORISSA</option><option value="PONDICHERRY">PONDICHERRY</option><option value="PUNJAB">PUNJAB</option><option value="RAJASTHAN">RAJASTHAN</option><option value="SIKKIM">SIKKIM</option><option value="TAMIL NADU">TAMIL NADU</option><option value="TRIPURA">TRIPURA</option><option value="UTTAR PRADESH">UTTAR PRADESH</option><option value="UTTARANCHAL">UTTARANCHAL</option><option value="WEST BENGAL">WEST BENGAL</option> 
+					</select>&nbsp;</td>
+		</tr>
+		<tr>
+			<td><strong>PINCODE</strong><span class="txtsuper">&nbsp;*</span></td>
+			<td>&nbsp;<input type="text" name="custpincode" id="custpincode" size="10" maxlength="6"></td>
+		</tr>
+		<tr>
+			<td><strong>PHONE</strong></td>
+			<td>&nbsp;<input type="text" name="custphonestd" id="custphonestd" size="5" maxlength="5">&nbsp;<input type="text" name="custphone" id="custphone" size="20" maxlength="10"></td>
+		</tr>
+		<tr>
+			<td><strong>MOBILE</strong></td>
+			<td>&nbsp;<input type="text" name="custmobile" id="custmobile" size="30" maxlength="10"></td>
+		</tr>
+		<tr>
+			<td><strong>E-MAIL</strong><span class="txtsuper">&nbsp;*</span></td>
+			<td>&nbsp;<input type="text" name="custemail" id="custemail" size="70" maxlength="150"></td>
+		</tr>
+		<tr>
+			<td><strong>GENDER</strong><span class="txtsuper">&nbsp;*</span></td>
+			<td valign="middle">
+				<p>
+					<label>&nbsp;<input type="radio" name="radiobutton1" value="male" id="radiobutton10">
+						<strong>MALE</strong></label>
+					<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<label>
+							<input type="radio" name="radiobutton1" value="female" id="radiobutton11">
+							FEMALE
+						</label>
+					</strong><br>
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td><strong>DATE OF BIRTH</strong><span class="txtsuper">&nbsp;*</span></td>
+			<td>&nbsp;
+				<select name="dobday" id="dobday">
+					<option value="-1" selected>Select day</option> <option value="01">1</option><option value="02">2</option><option value="03">3</option><option value="04">4</option><option value="05">5</option><option value="06">6</option><option value="07">7</option><option value="08">8</option><option value="09">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select>&nbsp;
+				<select name="dobmonth" id="dobmonth">
+					<option value="-1" selected>Select month</option> <option value="01">Jan</option><option value="02">Feb</option><option value="03">Mar</option><option value="04">Apr</option><option value="05">May</option><option value="06">Jun</option><option value="07">Jul</option><option value="08">Aug</option><option value="09">Sep</option><option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option></select>&nbsp;&nbsp;
+				<select name="dobyear" id="dobyear">
+					<option value="-1" selected>Select year</option> <option value="1930">1930</option><option value="1931">1931</option><option value="1932">1932</option><option value="1933">1933</option><option value="1934">1934</option><option value="1935">1935</option><option value="1936">1936</option><option value="1937">1937</option><option value="1938">1938</option><option value="1939">1939</option><option value="1940">1940</option><option value="1941">1941</option><option value="1942">1942</option><option value="1943">1943</option><option value="1944">1944</option><option value="1945">1945</option><option value="1946">1946</option><option value="1947">1947</option><option value="1948">1948</option><option value="1949">1949</option><option value="1950">1950</option><option value="1951">1951</option><option value="1952">1952</option><option value="1953">1953</option><option value="1954">1954</option><option value="1955">1955</option><option value="1956">1956</option><option value="1957">1957</option><option value="1958">1958</option><option value="1959">1959</option><option value="1960">1960</option><option value="1961">1961</option><option value="1962">1962</option><option value="1963">1963</option><option value="1964">1964</option><option value="1965">1965</option><option value="1966">1966</option><option value="1967">1967</option><option value="1968">1968</option><option value="1969">1969</option><option value="1970">1970</option><option value="1971">1971</option><option value="1972">1972</option><option value="1973">1973</option><option value="1974">1974</option><option value="1975">1975</option><option value="1976">1976</option><option value="1977">1977</option><option value="1978">1978</option><option value="1979">1979</option><option value="1980">1980</option><option value="1981">1981</option><option value="1982">1982</option><option value="1983">1983</option><option value="1984">1984</option><option value="1985">1985</option><option value="1986">1986</option><option value="1987">1987</option><option value="1988">1988</option><option value="1989">1989</option><option value="1990">1990</option></select></td>
+		</tr>
+		<tr>
+			<td><strong>OCCUPATION</strong><span class="txtsuper">&nbsp;*</span></td>
+			<td>&nbsp;<select name="custoccupation" size="1" id="custoccupation">
+            <option value="-1" selected>Select occupation</option><option value="Salaried" >Salaried</option><option value="Self Employed">Self Employed</option><option value="Businessman">Businessman</option><option value="Agriculturist">Agriculturist</option><option value="Not employed">Not employed</option></select>&nbsp;</td>
+		</tr>
+		<tr>
+			<td><strong>PAN NUMBER</strong><span class="txtsuper">&nbsp;*</span></td>
+			<td>&nbsp;<input type="text" name="custpannumber" id="custpannumber" size="10" maxlength="10"></td>
+		</tr>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+		</table>
+		<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		 ;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<tbody>
+			<tr>
+				<input type="submit" name="submit" value="submit" align="middle" width="50">
+			</tr>
+		</tbody>
+		<tbody align="left">
+			<h4><span class="txtsuper">&nbsp;*</span>(Mandatory)</h4>
+		</tbody>
+		<p class="footLine" valign="top" align="left" bgcolor="#0000CC">
+				<img src="img/line.jpg" alt="" width="1" height="4" class="footLine">
+		</p>
+		<tbody>
+			<tr class="textn">	
+				<td align="center"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<b>© 2011 Copyright Vikash Kumar Varanwal &nbsp; &nbsp;&nbsp;&nbsp;</b>
+				</td> 
+			</tr> 
+		</tbody>
+	</form>
+</body>
+</html>

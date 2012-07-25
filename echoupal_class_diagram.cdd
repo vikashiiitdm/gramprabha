@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<c:Diagram
+xmlns:c="http://www.cadifra.com/schema/1.0"
+xmlns:c1v3="http://www.cadifra.com/schema/1.3"
+ProductVersion="1.3.2">
+
+<Page id="r1"
+Size="1"
+Width="21590"
+Height="27940"
+Rows="1"
+Columns="1"
+Margins="1016 1016 1016 1016"
+CutGlueMargins="1016 1016 1016 1016"
+Scale="1"/>
+
+<DiagramType id="r2"
+TypeValue="1"/>
+
+<Style id="r3">
+<dir n="Base" Typeface="arial" Size="11" Bold="0">
+<dir n="Class Diagram">
+<dir n="Association" Bold="1"/>
+<dir n="Class" Bold="0">
+<dir n="Attached Text"/>
+<dir n="Compartment" Size="8"/>
+<dir n="Header" Bold="1"/>
+<dir n="Template Parameters" Size="8"/>
+</dir>
+<dir n="Multiplicity, Role" Bold="0"/>
+<dir n="Package" Bold="1"/>
+</dir>
+<dir n="Dependency" Bold="0"/>
+<dir n="Free Text" Size="10" Bold="0"/>
+</dir>
+</Style>
+
+<Generalization id="r12">
+<End id="r13"
+Pos="9400 -4600"
+Class="r8"
+Type="2"/>
+<Segment id="r14"
+Ends="r13 r15"/>
+<Join id="r15"
+Pos="9400 -2800"/>
+<Segment id="r16"
+Ends="r15 r17"/>
+<End id="r17"
+Pos="12000 -2800"
+Class="r7"
+Type="1"/>
+</Generalization>
+
+<Assoc id="r20">
+<End id="r97"
+Pos="4800 -10500"
+Class="r4"
+Type="1"/>
+<Segment id="r98"
+Ends="r97 r99"/>
+<Join id="r99"
+Pos="1000 -10500"/>
+<Segment id="r100"
+Ends="r99 r101"/>
+<Join id="r101"
+Pos="1000 -19000"/>
+<Segment id="r102"
+Ends="r101 r103"/>
+<End id="r103"
+Pos="9000 -19000"
+Class="r93"
+Type="1"/>
+</Assoc>
+
+<Generalization id="r28">
+<End id="r29"
+Pos="12100 -5000"
+Class="r9"
+Type="2"/>
+<Segment id="r30"
+Ends="r29 r31"/>
+<End id="r31"
+Pos="12100 -4400"
+Class="r7"
+Type="1"/>
+</Generalization>
+
+<Generalization id="r33">
+<End id="r19"
+Pos="16300 -2700"
+Class="r10"
+Type="2"/>
+<End id="r23"
+Pos="14400 -2700"
+Class="r7"
+Type="1"/>
+<Segment id="r27"
+Ends="r23 r19"/>
+</Generalization>
+
+<Generalization id="r45">
+<End id="r46"
+Pos="14800 -4700"
+Class="r11"
+Type="2"/>
+<Segment id="r47"
+Ends="r46 r48"/>
+<Join id="r48"
+Pos="14800 -3300"/>
+<Segment id="r49"
+Ends="r48 r50"/>
+<End id="r50"
+Pos="14400 -3300"
+Class="r7"
+Type="1"/>
+</Generalization>
+
+<Package id="r59"
+Pos="400 -1600"
+Size="19100 20900">
+<Text/>
+<Class id="r7"
+Pos="12000 -1900"
+Size="2400 2500">
+<Text>search_info</Text>
+<Compartment id="r25"
+Pos="12000 -3000"
+Size="2400 600">
+<Text>choice.Int</Text>
+</Compartment>
+<Compartment id="r26"
+Pos="12000 -3600"
+Size="2400 800"
+Previous="r25">
+<Text>getChoice().Int</Text>
+</Compartment>
+</Class>
+<Class id="r8"
+Pos="7400 -4600"
+Size="2900 2900">
+<Text>weather</Text>
+<Compartment id="r57"
+Pos="7400 -5700"
+Size="2900 900">
+<Text>location.String<p/>
+timespan.Int</Text>
+</Compartment>
+<Compartment id="r58"
+Pos="7400 -6600"
+Size="2900 900"
+Previous="r57">
+<Text>getLocation():String<p/>
+getTimeSpan():Int</Text>
+</Compartment>
+</Class>
+<Class id="r9"
+Pos="10500 -5000"
+Size="2900 2500">
+<Text>mod_sci_farm</Text>
+<Compartment id="r55"
+Pos="10500 -6100"
+Size="2900 600">
+<Text>proceed.Boolean</Text>
+</Compartment>
+<Compartment id="r56"
+Pos="10500 -6700"
+Size="2900 800"
+Previous="r55">
+<Text>getPerm().Boolean</Text>
+</Compartment>
+</Class>
+<Class id="r10"
+Pos="16300 -2600"
+Size="2700 3200">
+<Text>mar_price</Text>
+<Compartment id="r51"
+Pos="16300 -3700"
+Size="2700 1200">
+<Text>item.String<p/>
+choice_mar.Int</Text>
+</Compartment>
+<Compartment id="r52"
+Pos="16300 -4900"
+Size="2700 900"
+Previous="r51">
+<Text>getItem().String<p/>
+getChoiceMar().Int</Text>
+</Compartment>
+</Class>
+<Class id="r11"
+Pos="13600 -4700"
+Size="2300 3500">
+<Text>aval_mar</Text>
+<Compartment id="r53"
+Pos="13600 -5800"
+Size="2300 1200">
+<Text>item.String<p/>
+avlamt.Int</Text>
+</Compartment>
+<Compartment id="r54"
+Pos="13600 -7000"
+Size="2300 1200"
+Previous="r53">
+<Text>getItem():String<p/>
+getamt():Int<p/>
+</Text>
+</Compartment>
+</Class>
+<Package id="r21"
+Pos="1700 -8400"
+Size="11300 9700">
+<Text/>
+<Class id="r4"
+Pos="4800 -8800"
+Size="3000 3400">
+<Text>verified user</Text>
+<Compartment id="r5"
+Pos="4800 -9800"
+Size="3000 1200">
+<Text> username:String<p/>
+ password:String<p/>
+</Text>
+</Compartment>
+<Compartment id="r6"
+Pos="4800 -11000"
+Size="3000 1200"
+Previous="r5">
+<Text>getUsername():String<p/>
+isVerified():Boolean<p/>
+getPassword:String</Text>
+</Compartment>
+</Class>
+<Class id="r18"
+Pos="5600 -13800"
+Size="2500 3200">
+<Text>purchase</Text>
+<Compartment id="r22"
+Pos="5600 -14900"
+Size="2500 900">
+<Text>item.String<p/>
+amount.Int</Text>
+</Compartment>
+<Compartment id="r24"
+Pos="5600 -15800"
+Size="2500 1200"
+Previous="r22">
+<Text>getItem():String<p/>
+getAmount().Int<p/>
+</Text>
+</Compartment>
+</Class>
+<Class id="r32"
+Pos="2100 -13800"
+Size="2900 3500">
+<Text>sell</Text>
+<Compartment id="r41"
+Pos="2100 -14900"
+Size="2900 1200">
+<Text>item.String<p/>
+amount.Int<p/>
+price.Float</Text>
+</Compartment>
+<Compartment id="r42"
+Pos="2100 -16100"
+Size="2900 1200"
+Previous="r41">
+<Text>getItem():String<p/>
+getAmount().Int<p/>
+getPrice().Float</Text>
+</Compartment>
+</Class>
+<Class id="r34"
+Pos="9200 -13800"
+Size="3200 3800">
+<Text>credit_card</Text>
+<Compartment id="r43"
+Pos="9200 -14900"
+Size="3200 1500">
+<Text>private accntno.String<p/>
+private avail_bal.Float<p/>
+private transfer.Float<p/>
+</Text>
+</Compartment>
+<Compartment id="r44"
+Pos="9200 -16400"
+Size="3200 1200"
+Previous="r43">
+<Text>getAccntno().String<p/>
+getTransbal().Float<p/>
+</Text>
+</Compartment>
+</Class>
+<PackageRider id="r61"
+Size="2400 700">
+<Text>BANK_JOB</Text>
+</PackageRider>
+<FreeText id="r105"
+Pos="3800 -13400"
+Origin="1">
+<Text>0..*</Text>
+</FreeText>
+<FreeText id="r106"
+Pos="6900 -12200"
+Origin="1">
+<Text>1</Text>
+</FreeText>
+<FreeText id="r107"
+Pos="6900 -13400"
+Origin="1">
+<Text>0..*</Text>
+</FreeText>
+<FreeText id="r108"
+Pos="11000 -13400"
+Origin="1">
+<Text>1..*</Text>
+</FreeText>
+<FreeText id="r111"
+Pos="8000 -10000"
+Origin="1">
+<Text>0..*</Text>
+</FreeText>
+<FreeText id="r112"
+Pos="5600 -8400"
+Origin="1">
+<Text>1</Text>
+</FreeText>
+<FreeText id="r114"
+Pos="7000 -8400"
+Origin="1">
+<Text>0..*</Text>
+</FreeText>
+<FreeText id="r115"
+Pos="4400 -9900"
+Origin="1">
+<Text>1</Text>
+</FreeText>
+</Package>
+<Class id="r35"
+Pos="15000 -12300"
+Size="2300 2500">
+<Text>selec_oper<p/>
+</Text>
+<Compartment id="r39"
+Pos="15000 -13400"
+Size="2300 600">
+<Text>choice.Int</Text>
+</Compartment>
+<Compartment id="r40"
+Pos="15000 -14000"
+Size="2300 800"
+Previous="r39">
+<Text>getChoice():Int</Text>
+</Compartment>
+</Class>
+<Class id="r36"
+Pos="600 -1700"
+Size="2600 5500">
+<Text>register_new<p/>
+</Text>
+<Compartment id="r37"
+Pos="600 -2800"
+Size="2600 2200">
+<Text>username.String<p/>
+password.String<p/>
+fullname.String<p/>
+contactno.String<p/>
+address.String<p/>
+</Text>
+</Compartment>
+<Compartment id="r38"
+Pos="600 -5000"
+Size="2600 2200"
+Previous="r37">
+<Text>getUsername();<p/>
+getPassword();<p/>
+getFname();<p/>
+getContactno();<p/>
+getAddress();<p/>
+</Text>
+</Compartment>
+</Class>
+<PackageRider id="r60"
+Size="2600 700">
+<Text>&lt;e-Choupal&gt;</Text>
+</PackageRider>
+<Class id="r93"
+Pos="9000 -18400"
+Size="3200 2900">
+<Text>feedback</Text>
+<Compartment id="r94"
+Pos="9000 -19500"
+Size="3200 900">
+<Text>message.String</Text>
+</Compartment>
+<Compartment id="r95"
+Pos="9000 -20400"
+Size="3200 900"
+Previous="r94">
+<Text>getMessage():String</Text>
+</Compartment>
+</Class>
+<FreeText id="r104"
+Pos="3400 -2000"
+Origin="1">
+<Text>1</Text>
+</FreeText>
+<FreeText id="r109"
+Pos="7800 -19000"
+Origin="1">
+<Text>0..*</Text>
+</FreeText>
+<FreeText id="r110"
+Pos="16600 -11900"
+Origin="1">
+<Text>1</Text>
+</FreeText>
+<FreeText id="r113"
+Pos="10700 -1900"
+Origin="1">
+<Text>0..*</Text>
+</FreeText>
+</Package>
+
+<Assoc id="r75">
+<End id="r62"
+Pos="6800 -12200"
+Class="r4"
+Type="1"/>
+<Segment id="r63"
+Ends="r62 r74"/>
+<Segment id="r64"
+Ends="r74 r65"/>
+<Join id="r65"
+Pos="4200 -13200"/>
+<Segment id="r66"
+Ends="r65 r67"/>
+<End id="r67"
+Pos="4200 -13800"
+Class="r32"
+Type="1"/>
+<End id="r68"
+Pos="6800 -13800"
+Class="r18"
+Type="1"/>
+<Segment id="r69"
+Ends="r68 r74"/>
+<End id="r70"
+Pos="10600 -13800"
+Class="r34"
+Type="1"/>
+<Segment id="r71"
+Ends="r70 r72"/>
+<Join id="r72"
+Pos="10600 -13200"/>
+<Segment id="r73"
+Ends="r72 r74"/>
+<Join id="r74"
+Pos="6800 -13200"/>
+</Assoc>
+
+<Assoc id="r76">
+<End id="r77"
+Pos="7800 -9800"
+Class="r4"
+Type="1"/>
+<Segment id="r78"
+Ends="r77 r79"/>
+<Join id="r79"
+Pos="16100 -9800"/>
+<Segment id="r80"
+Ends="r79 r81"/>
+<End id="r81"
+Pos="16100 -12300"
+Class="r35"
+Type="1"/>
+</Assoc>
+
+<Assoc id="r82">
+<End id="r83"
+Pos="3200 -2300"
+Class="r36"
+Type="1"/>
+<Segment id="r84"
+Ends="r83 r85"/>
+<Join id="r85"
+Pos="6000 -2300"/>
+<Segment id="r86"
+Ends="r85 r87"/>
+<End id="r87"
+Pos="6000 -8800"
+Class="r4"
+Type="1"/>
+</Assoc>
+
+<Assoc id="r88">
+<End id="r89"
+Pos="7000 -8800"
+Class="r4"
+Type="1"/>
+<Segment id="r90"
+Ends="r89 r91"/>
+<Join id="r91"
+Pos="7000 -2300"/>
+<Segment id="r92"
+Ends="r91 r96"/>
+<End id="r96"
+Pos="12000 -2300"
+Class="r7"
+Type="1"/>
+</Assoc>
+
+</c:Diagram>

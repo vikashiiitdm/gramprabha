@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<c:Diagram
+xmlns:c="http://www.cadifra.com/schema/1.0"
+xmlns:c1v3="http://www.cadifra.com/schema/1.3"
+ProductVersion="1.3.2">
+
+<Page id="r1"
+Size="1"
+Width="21590"
+Height="27940"
+Rows="1"
+Columns="1"
+Margins="1016 1016 1016 1016"
+CutGlueMargins="1016 1016 1016 1016"
+Scale="1"/>
+
+<DiagramType id="r2"
+TypeValue="3"/>
+
+<Style id="r3">
+<dir n="Base" Typeface="arial" Size="11" Bold="0">
+<dir n="Free Text" Size="10" Bold="0"/>
+<dir n="Note" Size="9" Bold="0"/>
+<dir n="Use Case Diagram">
+<dir n="Actor" Bold="1"/>
+<dir n="System" Bold="1"/>
+<dir n="Use Case" Bold="1"/>
+</dir>
+</dir>
+</Style>
+
+<Actor id="r4"
+Pos="2700 -1200"
+Size="1100 1400">
+<Text>user<p/>
+</Text>
+</Actor>
+
+<Actor id="r5"
+Pos="16800 -1800"
+Size="1100 1400">
+<Text>sanchalak</Text>
+</Actor>
+
+<Actor id="r6"
+Pos="15900 -6500"
+Size="1100 1400">
+<Text>system</Text>
+</Actor>
+
+<UseCaseAssoc id="r15">
+<End id="r16"
+Pos="3660 -3100"
+Actor="r4"/>
+<Segment id="r17"
+Oblique="1"/>
+<End id="r18"
+Pos="8400 -4400"
+UseCase="r8"/>
+</UseCaseAssoc>
+
+<UseCaseAssoc id="r19">
+<End id="r20"
+Pos="3660 -3500"
+Actor="r4"/>
+<Segment id="r21"
+Oblique="1"/>
+<End id="r22"
+Pos="8530.3061543300937 -5900"
+UseCase="r9"/>
+</UseCaseAssoc>
+
+<UseCaseAssoc id="r23">
+<End id="r24"
+Pos="3660 -2700"
+Actor="r4"/>
+<Segment id="r25"
+Oblique="1"/>
+<End id="r26"
+Pos="8300 -2700"
+UseCase="r7"/>
+</UseCaseAssoc>
+
+<UseCaseAssoc id="r27">
+<End id="r28"
+Pos="3660 -3100"
+Actor="r4"/>
+<Segment id="r29"
+Oblique="1"/>
+<End id="r30"
+Pos="8700 -7600"
+UseCase="r10"/>
+</UseCaseAssoc>
+
+<UseCaseAssoc id="r31">
+<End id="r32"
+Pos="3660 -3100"
+Actor="r4"/>
+<Segment id="r33"
+Oblique="1"/>
+<End id="r34"
+Pos="8900 -9100"
+UseCase="r11"/>
+</UseCaseAssoc>
+
+<UseCaseAssoc id="r35">
+<End id="r36"
+Pos="3660 -3200"
+Actor="r4"/>
+<Segment id="r37"
+Oblique="1"/>
+<End id="r38"
+Pos="9100 -10700"
+UseCase="r12"/>
+</UseCaseAssoc>
+
+<UseCaseAssoc id="r39">
+<End id="r40"
+Pos="3660 -3200"
+Actor="r4"/>
+<Segment id="r41"
+Oblique="1"/>
+<End id="r42"
+Pos="8541.418410917795 -11900"
+UseCase="r13"/>
+</UseCaseAssoc>
+
+<UseCaseAssoc id="r43">
+<End id="r44"
+Pos="3400 -3592"
+Actor="r4"/>
+<Segment id="r45"
+Oblique="1"/>
+<End id="r46"
+Pos="9100 -13120.494506428849"
+UseCase="r14"/>
+</UseCaseAssoc>
+
+<UseCaseAssoc id="r47">
+<End id="r48"
+Pos="16800 -3000"
+Actor="r5"/>
+<Segment id="r49"
+Oblique="1"/>
+<End id="r50"
+Pos="11469.693845669906 -5900"
+UseCase="r9"/>
+</UseCaseAssoc>
+
+<UseCaseAssoc id="r51">
+<End id="r52"
+Pos="17600 -3746"
+Actor="r5"/>
+<Segment id="r53"
+Oblique="1"/>
+<End id="r54"
+Pos="11700 -7600"
+UseCase="r10"/>
+</UseCaseAssoc>
+
+<UseCaseAssoc id="r55">
+<End id="r56"
+Pos="17500 -3746"
+Actor="r5"/>
+<Segment id="r57"
+Oblique="1"/>
+<End id="r58"
+Pos="11869.693845669906 -9000"
+UseCase="r11"/>
+</UseCaseAssoc>
+
+<UseCaseAssoc id="r59">
+<End id="r60"
+Pos="17300 -3746"
+Actor="r5"/>
+<Segment id="r61"
+Oblique="1"/>
+<End id="r62"
+Pos="12069.693845669906 -10600"
+UseCase="r12"/>
+</UseCaseAssoc>
+
+<UseCaseAssoc id="r63">
+<End id="r64"
+Pos="17100 -3746"
+Actor="r5"/>
+<Segment id="r65"
+Oblique="1"/>
+<End id="r66"
+Pos="11969.693845669906 -13200"
+UseCase="r14"/>
+</UseCaseAssoc>
+
+<UseCaseAssoc id="r67">
+<End id="r68"
+Pos="16200 -6500"
+Actor="r6"/>
+<Segment id="r69"
+Oblique="1"/>
+<End id="r70"
+Pos="11174.772708486751 -2900"
+UseCase="r7"/>
+</UseCaseAssoc>
+
+<UseCaseAssoc id="r71">
+<End id="r72"
+Pos="15900 -7400"
+Actor="r6"/>
+<Segment id="r73"
+Oblique="1"/>
+<End id="r74"
+Pos="11400 -4400"
+UseCase="r8"/>
+</UseCaseAssoc>
+
+<UseCaseAssoc id="r75">
+<End id="r76"
+Pos="15900 -7900"
+Actor="r6"/>
+<Segment id="r77"
+Oblique="1"/>
+<End id="r78"
+Pos="11500 -6000"
+UseCase="r9"/>
+</UseCaseAssoc>
+
+<UseCaseAssoc id="r79">
+<End id="r80"
+Pos="15782 -8200"
+Actor="r6"/>
+<Segment id="r81"
+Oblique="1"/>
+<End id="r82"
+Pos="11869.693845669906 -9200"
+UseCase="r11"/>
+</UseCaseAssoc>
+
+<UseCaseAssoc id="r83">
+<End id="r84"
+Pos="15900 -7800"
+Actor="r6"/>
+<Segment id="r85"
+Oblique="1"/>
+<End id="r86"
+Pos="11669.693845669906 -7700"
+UseCase="r10"/>
+</UseCaseAssoc>
+
+<UseCaseAssoc id="r87">
+<End id="r88"
+Pos="16600 -8446"
+Actor="r6"/>
+<Segment id="r89"
+Oblique="1"/>
+<End id="r90"
+Pos="11900 -10450.556174215071"
+UseCase="r12"/>
+</UseCaseAssoc>
+
+<UseCaseAssoc id="r91">
+<End id="r92"
+Pos="16500 -8446"
+Actor="r6"/>
+<Segment id="r93"
+Oblique="1"/>
+<End id="r94"
+Pos="12300 -11739.583457267529"
+UseCase="r13"/>
+</UseCaseAssoc>
+
+<UseCaseAssoc id="r95">
+<End id="r96"
+Pos="16700 -8446"
+Actor="r6"/>
+<Segment id="r97"
+Oblique="1"/>
+<End id="r98"
+Pos="12000 -13300"
+UseCase="r14"/>
+</UseCaseAssoc>
+
+<System id="r99"
+Pos="6200 -600"
+Size="8700 15700">
+<Text>e-choupal</Text>
+<UseCase id="r7"
+Pos="8300 -2200"
+Size="3000 1000">
+<Text>verified_user</Text>
+</UseCase>
+<UseCase id="r8"
+Pos="8400 -3900"
+Size="3000 1000">
+<Text>register</Text>
+</UseCase>
+<UseCase id="r9"
+Pos="8500 -5500"
+Size="3000 1000">
+<Text>search for info</Text>
+</UseCase>
+<UseCase id="r10"
+Pos="8700 -7100"
+Size="3000 1000">
+<Text>marketing</Text>
+</UseCase>
+<UseCase id="r11"
+Pos="8900 -8600"
+Size="3000 1000">
+<Text>purchasing</Text>
+</UseCase>
+<UseCase id="r12"
+Pos="9100 -10200"
+Size="3000 1000">
+<Text>credit balance</Text>
+</UseCase>
+<UseCase id="r13"
+Pos="8500 -11500"
+Size="4100 1000">
+<Text>selection of operator</Text>
+</UseCase>
+<UseCase id="r14"
+Pos="9000 -12800"
+Size="3000 1000">
+<Text>feedback</Text>
+</UseCase>
+<FreeText id="r100"
+Pos="8700 -15600"
+Origin="1">
+<Text/>
+</FreeText>
+<UseCase id="r101"
+Pos="9000 -14200"
+Size="3000 1000">
+<Text>user interface</Text>
+</UseCase>
+</System>
+
+<UseCaseAssoc id="r102">
+<End id="r103"
+Pos="3660 -3200"
+Actor="r4"/>
+<Segment id="r104"
+Oblique="1"/>
+<End id="r105"
+Pos="9000 -14700"
+UseCase="r101"/>
+</UseCaseAssoc>
+
+<UseCaseAssoc id="r106">
+<End id="r107"
+Pos="17500 -3746"
+Actor="r5"/>
+<Segment id="r108"
+Oblique="1"/>
+<End id="r109"
+Pos="12000 -14700"
+UseCase="r101"/>
+</UseCaseAssoc>
+
+<UseCaseAssoc id="r110">
+<End id="r111"
+Pos="17100 -8000"
+Actor="r6"/>
+<Segment id="r112"
+Oblique="1"/>
+<End id="r113"
+Pos="11400 -14300"
+UseCase="r101"/>
+</UseCaseAssoc>
+
+</c:Diagram>

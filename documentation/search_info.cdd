@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<c:Diagram
+xmlns:c="http://www.cadifra.com/schema/1.0"
+xmlns:c1v3="http://www.cadifra.com/schema/1.3"
+ProductVersion="1.3.2">
+
+<Page id="r1"
+Size="1"
+Width="21590"
+Height="27940"
+Rows="1"
+Columns="1"
+Margins="1016 1016 1016 1016"
+CutGlueMargins="1016 1016 1016 1016"
+Scale="1"/>
+
+<DiagramType id="r2"
+TypeValue="3"/>
+
+<Style id="r3">
+<dir n="Base" Typeface="arial" Size="11" Bold="0">
+<dir n="Free Text" Size="10" Bold="0"/>
+<dir n="Sequence Diagram">
+<dir n="Message" Bold="0"/>
+<dir n="Object" Bold="0"/>
+</dir>
+<dir n="Use Case Diagram">
+<dir n="Actor" Bold="1"/>
+</dir>
+</dir>
+</Style>
+
+<SeqObject id="r4"
+Pos="2300 -200"
+Size="2000 1000">
+<Text>:uttam</Text>
+<LifeLine id="r5"
+Pos="3300 -1200"
+Len="10900">
+<Activation id="r12"
+Pos="3100 -1800"
+Len="900"/>
+<Activation id="r21"
+Pos="3100 -3200"
+Len="1100"/>
+<Activation id="r29"
+Pos="3100 -4800"
+Len="1100"/>
+<Activation id="r47"
+Pos="3100 -8900"
+Len="800"/>
+<Activation id="r55"
+Pos="3100 -10400"
+Len="1100"/>
+</LifeLine>
+</SeqObject>
+
+<SeqObject id="r6"
+Pos="5900 -300"
+Size="2000 1000">
+<Text>:system</Text>
+<LifeLine id="r7"
+Pos="6900 -1300"
+Len="10900">
+<Activation id="r14"
+Pos="6700 -1800"
+Len="1000"/>
+<Activation id="r40"
+Pos="6700 -6700"
+Len="1500"/>
+<Activation id="r48"
+Pos="6700 -9100"
+Len="900"/>
+<Activation id="r56"
+Pos="6700 -10500"
+Len="1000"/>
+</LifeLine>
+</SeqObject>
+
+<SeqObject id="r8"
+Pos="8200 -300"
+Size="2800 1000">
+<Text>:search info</Text>
+<LifeLine id="r9"
+Pos="9600 -1300"
+Len="10800">
+<Activation id="r22"
+Pos="9400 -3200"
+Len="1100"/>
+</LifeLine>
+</SeqObject>
+
+<SeqObject id="r10"
+Pos="11600 -300"
+Size="3600 1000">
+<Text>item: search info</Text>
+<LifeLine id="r11"
+Pos="13400 -1300"
+Len="10800">
+<Activation id="r30"
+Pos="13200 -4900"
+Len="1000"/>
+</LifeLine>
+</SeqObject>
+
+<FreeText id="r13"
+Pos="3000 -2200"
+Origin="1">
+<Text/>
+</FreeText>
+
+<Message id="r15">
+<SourceEnd id="r16"
+Pos="3500 -2300"
+Party="r12"/>
+<Segment id="r17">
+<Anchor id="r19"
+Pos="3500 -2300">
+<FreeText id="r20"
+Pos="3700 -2100"
+Origin="4">
+<Text>valid user</Text>
+</FreeText>
+</Anchor>
+</Segment>
+<TargetEnd id="r18"
+Pos="6700 -2300"
+Party="r14"
+ArrowType="1"/>
+</Message>
+
+<Message id="r23">
+<SourceEnd id="r24"
+Pos="3500 -3900"
+Party="r21"/>
+<Segment id="r25">
+<Anchor id="r27"
+Pos="3700 -3900">
+<FreeText id="r28"
+Pos="3700 -3700"
+Origin="4">
+<Text>select search menu</Text>
+</FreeText>
+</Anchor>
+</Segment>
+<TargetEnd id="r26"
+Pos="9400 -3900"
+Party="r22"
+ArrowType="1"/>
+</Message>
+
+<Message id="r31">
+<SourceEnd id="r32"
+Pos="3500 -5600"
+Party="r29"/>
+<Segment id="r33">
+<Anchor id="r35"
+Pos="4300 -5600">
+<FreeText id="r36"
+Pos="4300 -5400"
+Origin="4">
+<Text>select the item</Text>
+</FreeText>
+</Anchor>
+</Segment>
+<TargetEnd id="r34"
+Pos="13200 -5600"
+Party="r30"
+ArrowType="1"/>
+</Message>
+
+<SeqObject id="r37"
+Pos="15700 -300"
+Size="3600 1000">
+<Text>display:search info</Text>
+<LifeLine id="r38"
+Pos="17500 -1300"
+Len="10800">
+<Activation id="r39"
+Pos="17300 -6700"
+Len="1300"/>
+</LifeLine>
+</SeqObject>
+
+<Message id="r41">
+<SourceEnd id="r42"
+Pos="7100 -7600"
+Party="r40"/>
+<Segment id="r43">
+<Anchor id="r45"
+Pos="10100 -7600">
+<FreeText id="r46"
+Pos="12555 -7500"
+Origin="3">
+<Text>display the info about the item</Text>
+</FreeText>
+</Anchor>
+</Segment>
+<TargetEnd id="r44"
+Pos="17300 -7600"
+Party="r39"
+ArrowType="1"/>
+</Message>
+
+<Message id="r49">
+<SourceEnd id="r50"
+Pos="3500 -9600"
+Party="r47"/>
+<Segment id="r51">
+<Anchor id="r53"
+Pos="3500 -9600">
+<FreeText id="r54"
+Pos="3783 -9400"
+Origin="4">
+<Text>read the info</Text>
+</FreeText>
+</Anchor>
+</Segment>
+<TargetEnd id="r52"
+Pos="6700 -9600"
+Party="r48"
+ArrowType="1"/>
+</Message>
+
+<Message id="r57">
+<SourceEnd id="r58"
+Pos="3500 -11300"
+Party="r55"/>
+<Segment id="r59">
+<Anchor id="r61"
+Pos="3500 -11300">
+<FreeText id="r62"
+Pos="3600 -11100"
+Origin="4">
+<Text>close the window</Text>
+</FreeText>
+</Anchor>
+</Segment>
+<TargetEnd id="r60"
+Pos="6700 -11300"
+Party="r56"
+ArrowType="1"/>
+</Message>
+
+<FreeText id="r63"
+Pos="5900 -14100"
+Origin="1">
+<Text>sequence diagram for search for information</Text>
+</FreeText>
+
+<Actor id="r64"
+Pos="600 -200"
+Size="1100 1400">
+<Text>uttam</Text>
+</Actor>
+
+</c:Diagram>

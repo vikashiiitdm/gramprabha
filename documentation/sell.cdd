@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<c:Diagram
+xmlns:c="http://www.cadifra.com/schema/1.0"
+xmlns:c1v3="http://www.cadifra.com/schema/1.3"
+ProductVersion="1.3.2">
+
+<Page id="r1"
+Size="1"
+Width="21590"
+Height="27940"
+Rows="1"
+Columns="1"
+Margins="1016 1016 1016 1016"
+CutGlueMargins="1016 1016 1016 1016"
+Scale="1"/>
+
+<DiagramType id="r2"
+TypeValue="3"/>
+
+<Style id="r3">
+<dir n="Base" Typeface="arial" Size="11" Bold="0">
+<dir n="Free Text" Size="10" Bold="0"/>
+<dir n="Sequence Diagram">
+<dir n="Message" Bold="0"/>
+<dir n="Object" Bold="0"/>
+</dir>
+<dir n="Use Case Diagram">
+<dir n="Actor" Bold="1"/>
+</dir>
+</dir>
+</Style>
+
+<Actor id="r4"
+Pos="400 -200"
+Size="1100 1400">
+<Text>uttam</Text>
+</Actor>
+
+<SeqObject id="r5"
+Pos="1500 -500"
+Size="2000 1000">
+<Text>:uttam</Text>
+<LifeLine id="r6"
+Pos="2500 -1500"
+Len="22000">
+<Activation id="r15"
+Pos="2300 -2000"
+Len="1500"/>
+<Activation id="r23"
+Pos="2300 -4100"
+Len="1200"/>
+<Activation id="r31"
+Pos="2300 -5800"
+Len="1500"/>
+<Activation id="r39"
+Pos="2300 -7800"
+Len="1400"/>
+<Activation id="r85"
+Pos="2300 -17700"
+Len="1200"/>
+<Activation id="r93"
+Pos="2300 -19300"
+Len="1700"/>
+<Activation id="r101"
+Pos="2300 -21500"
+Len="1300"/>
+</LifeLine>
+</SeqObject>
+
+<SeqObject id="r7"
+Pos="6200 -500"
+Size="2000 1000">
+<Text>:system</Text>
+<LifeLine id="r8"
+Pos="7200 -1500"
+Len="22000">
+<Activation id="r16"
+Pos="7000 -2000"
+Len="1600"/>
+<Activation id="r78"
+Pos="7000 -15500"
+Len="1800"/>
+<Activation id="r102"
+Pos="7000 -21300"
+Len="1500"/>
+</LifeLine>
+</SeqObject>
+
+<SeqObject id="r9"
+Pos="8700 -500"
+Size="1200 1000">
+<Text>:sell</Text>
+<LifeLine id="r10"
+Pos="9300 -1500"
+Len="22000">
+<Activation id="r24"
+Pos="9100 -3800"
+Len="1500"/>
+</LifeLine>
+</SeqObject>
+
+<SeqObject id="r11"
+Pos="10400 -500"
+Size="2000 1000">
+<Text>item:sell</Text>
+<LifeLine id="r12"
+Pos="11400 -1500"
+Len="21900">
+<Activation id="r32"
+Pos="11200 -5500"
+Len="1600"/>
+</LifeLine>
+</SeqObject>
+
+<SeqObject id="r13"
+Pos="12900 -500"
+Size="1600 900">
+<Text>:market</Text>
+<LifeLine id="r14"
+Pos="13700 -1400"
+Len="22000">
+<Activation id="r40"
+Pos="13500 -7300"
+Len="1700"/>
+</LifeLine>
+</SeqObject>
+
+<Message id="r17">
+<SourceEnd id="r18"
+Pos="2700 -2900"
+Party="r15"/>
+<Segment id="r19">
+<Anchor id="r21"
+Pos="3700 -2900">
+<FreeText id="r22"
+Pos="3700 -2700"
+Origin="4">
+<Text>valid user</Text>
+</FreeText>
+</Anchor>
+</Segment>
+<TargetEnd id="r20"
+Pos="7000 -2900"
+Party="r16"
+ArrowType="1"/>
+</Message>
+
+<Message id="r25">
+<SourceEnd id="r26"
+Pos="2700 -4900"
+Party="r23"/>
+<Segment id="r27">
+<Anchor id="r29"
+Pos="3800 -4900">
+<FreeText id="r30"
+Pos="3800 -4700"
+Origin="4">
+<Text>select the sell menu</Text>
+</FreeText>
+</Anchor>
+</Segment>
+<TargetEnd id="r28"
+Pos="9100 -4900"
+Party="r24"
+ArrowType="1"/>
+</Message>
+
+<Message id="r33">
+<SourceEnd id="r34"
+Pos="2700 -6600"
+Party="r31"/>
+<Segment id="r35">
+<Anchor id="r37"
+Pos="4000 -6600">
+<FreeText id="r38"
+Pos="4000 -6400"
+Origin="4">
+<Text>select the item</Text>
+</FreeText>
+</Anchor>
+</Segment>
+<TargetEnd id="r36"
+Pos="11200 -6600"
+Party="r32"
+ArrowType="1"/>
+</Message>
+
+<Message id="r41">
+<SourceEnd id="r42"
+Pos="2700 -8600"
+Party="r39"/>
+<Segment id="r43">
+<Anchor id="r45"
+Pos="3800 -8600">
+<FreeText id="r46"
+Pos="3800 -8400"
+Origin="4">
+<Text>select the market</Text>
+</FreeText>
+</Anchor>
+</Segment>
+<TargetEnd id="r44"
+Pos="13500 -8600"
+Party="r40"
+ArrowType="1"/>
+</Message>
+
+<SeqObject id="r47"
+Pos="15000 -500"
+Size="2000 1000">
+<Text>:account</Text>
+<LifeLine id="r48"
+Pos="16000 -1500"
+Len="21900">
+<Activation id="r55"
+Pos="15800 -9200"
+Len="1500"/>
+<Activation id="r63"
+Pos="15800 -11200"
+Len="1800"/>
+<Activation id="r86"
+Pos="15800 -17500"
+Len="1500"/>
+</LifeLine>
+</SeqObject>
+
+<SeqObject id="r49"
+Pos="17400 -500"
+Size="2000 1000">
+<Text>:transfer</Text>
+<LifeLine id="r50"
+Pos="18400 -1500"
+Len="21900">
+<Activation id="r71"
+Pos="18200 -13700"
+Len="1100"/>
+</LifeLine>
+</SeqObject>
+
+<SeqObject id="r51"
+Pos="3800 -500"
+Size="2000 1000">
+<Text>:anamika</Text>
+<LifeLine id="r52"
+Pos="4800 -1500"
+Len="22000">
+<Activation id="r54"
+Pos="4600 -9500"
+Len="1400"/>
+<Activation id="r62"
+Pos="4600 -11400"
+Len="1700"/>
+<Activation id="r70"
+Pos="4600 -13700"
+Len="1500"/>
+<Activation id="r79"
+Pos="4600 -15600"
+Len="1700"/>
+<Activation id="r94"
+Pos="4600 -19400"
+Len="1800"/>
+</LifeLine>
+</SeqObject>
+
+<Actor id="r53"
+Pos="600 -2800"
+Size="1100 1400">
+<Text>anamika</Text>
+</Actor>
+
+<Message id="r56">
+<SourceEnd id="r57"
+Pos="5000 -10300"
+Party="r54"/>
+<Segment id="r58">
+<Anchor id="r60"
+Pos="6100 -10300">
+<FreeText id="r61"
+Pos="6100 -10100"
+Origin="4">
+<Text>topen the account window</Text>
+</FreeText>
+</Anchor>
+</Segment>
+<TargetEnd id="r59"
+Pos="15800 -10300"
+Party="r55"
+ArrowType="1"/>
+</Message>
+
+<Message id="r64">
+<SourceEnd id="r65"
+Pos="5000 -12400"
+Party="r62"/>
+<Segment id="r66">
+<Anchor id="r68"
+Pos="5800 -12400">
+<FreeText id="r69"
+Pos="5800 -12200"
+Origin="4">
+<Text>type the acc number to transfer</Text>
+</FreeText>
+</Anchor>
+</Segment>
+<TargetEnd id="r67"
+Pos="15800 -12400"
+Party="r63"
+ArrowType="1"/>
+</Message>
+
+<Message id="r72">
+<SourceEnd id="r73"
+Pos="5000 -14600"
+Party="r70"/>
+<Segment id="r74">
+<Anchor id="r76"
+Pos="5900 -14600">
+<FreeText id="r77"
+Pos="5900 -14400"
+Origin="4">
+<Text>press the transfer button</Text>
+</FreeText>
+</Anchor>
+</Segment>
+<TargetEnd id="r75"
+Pos="18200 -14600"
+Party="r71"
+ArrowType="1"/>
+</Message>
+
+<Return id="r80">
+<SourceEnd id="r81"
+Pos="7000 -16900"
+Party="r78"/>
+<Segment id="r82"/>
+<TargetEnd id="r83"
+Pos="5000 -16900"
+Party="r79"/>
+</Return>
+
+<FreeText id="r84"
+Pos="4600 -16300"
+Origin="1">
+<Text>transfer is successfull</Text>
+</FreeText>
+
+<Message id="r87">
+<SourceEnd id="r88"
+Pos="2700 -18500"
+Party="r85"/>
+<Segment id="r89">
+<Anchor id="r91"
+Pos="3500 -18500">
+<FreeText id="r92"
+Pos="3500 -18300"
+Origin="4">
+<Text>open the acc and check the balance</Text>
+</FreeText>
+</Anchor>
+</Segment>
+<TargetEnd id="r90"
+Pos="15800 -18500"
+Party="r86"
+ArrowType="1"/>
+</Message>
+
+<Message id="r95">
+<SourceEnd id="r96"
+Pos="2700 -20400"
+Party="r93"/>
+<Segment id="r97">
+<Anchor id="r99"
+Pos="3300 -20400">
+<FreeText id="r100"
+Pos="2700 -20200"
+Origin="4">
+<Text>got the money</Text>
+</FreeText>
+</Anchor>
+</Segment>
+<TargetEnd id="r98"
+Pos="4600 -20400"
+Party="r94"
+ArrowType="1"/>
+</Message>
+
+<Return id="r103">
+<SourceEnd id="r104"
+Pos="7000 -22400"
+Party="r102"/>
+<Segment id="r105"/>
+<TargetEnd id="r106"
+Pos="2700 -22400"
+Party="r101"/>
+</Return>
+
+<FreeText id="r107"
+Pos="3200 -21900"
+Origin="1">
+<Text>log out</Text>
+</FreeText>
+
+<FreeText id="r108"
+Pos="4000 -24800"
+Origin="1">
+<Text>sequence diagram for selling the items</Text>
+</FreeText>
+
+</c:Diagram>

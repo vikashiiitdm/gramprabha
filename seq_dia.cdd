@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<c:Diagram
+xmlns:c="http://www.cadifra.com/schema/1.0"
+xmlns:c1v3="http://www.cadifra.com/schema/1.3"
+ProductVersion="1.3.2">
+
+<Page id="r1"
+Size="1"
+Width="21590"
+Height="27940"
+Rows="1"
+Columns="1"
+Margins="1016 1016 1016 1016"
+CutGlueMargins="1016 1016 1016 1016"
+Scale="1"/>
+
+<DiagramType id="r2"
+TypeValue="4"/>
+
+<Style id="r3">
+<dir n="Base" Typeface="arial" Size="11" Bold="0">
+<dir n="Note" Size="9" Bold="0"/>
+<dir n="Sequence Diagram">
+<dir n="Object" Bold="0"/>
+</dir>
+</dir>
+</Style>
+
+<SeqObject id="r4"
+Pos="3100 -4100"
+Size="2000 1000">
+<Text>:user</Text>
+<LifeLine id="r5"
+Pos="4100 -5100"
+Len="6000"/>
+</SeqObject>
+
+<SeqObject id="r6"
+Pos="7600 -4300"
+Size="2200 1000">
+<Text>:sanchalak</Text>
+<LifeLine id="r7"
+Pos="8700 -5300"
+Len="6000"/>
+</SeqObject>
+
+<SeqObject id="r8"
+Pos="12100 -4600"
+Size="2000 1100">
+<Text>:system<p/>
+</Text>
+<LifeLine id="r9"
+Pos="13100 -5700"
+Len="6000"/>
+</SeqObject>
+
+<Note id="r10"
+Pos="4100 -6100"
+Size="4600 1000">
+<Text> login<p/>
+</Text>
+</Note>
+
+</c:Diagram>
